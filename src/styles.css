@@ -94,6 +94,15 @@ font-weight: bold;
   flex-direction: column;
   align-items: center;
 }
+.info {
+  margin-top: 45px;
+  display: flex; 
+                justify-content: space-around; 
+               
+  
+  
+  
+}
 
 .forecast-value .degrees {
   font-size: 4rem;

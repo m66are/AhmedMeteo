@@ -1,4 +1,4 @@
-import { GET_WEATHER } from "../redux/Constants";
+import { GET_WEATHER } from "./Constants";
 const WeatherInitialState = {
   loading: false,
   error: false,
