@@ -2,7 +2,7 @@ import { GET_WEATHER } from "./Constants";
 import axios from "axios";
 import { BASE_URL } from "../components/ApiConstants";
 import { toast } from "react-toastify";
-export const GetWeatherDetails = (location = "hyderabad") => async dispatch => {
+export const GetWeatherDetails = (location = "Gabes") => async dispatch => {
   dispatch({ type: GET_WEATHER.PENDING });
   axios
     .get(BASE_URL, {

@@ -38,20 +38,20 @@ class Weather extends React.Component {
     return (
       <>
         <div className="container">
-          <div className="heading">Weather Finder</div>
+          <div className="heading">Meteo</div>
           <form className="search-form" onSubmit={this.handleSubmit}>
             <input
               type="text"
-              placeholder="Search Weather by City"
+              placeholder="Rechercher la météo par ville"
               value={searchInput}
               onChange={e => this.handleOnChange(e)}
             />
-            <button>Find</button>
+            <button>Trouver</button>
           </form>
-          <div className="helper-text">Type City Name and Hit Enter</div>
+          <div className="helper-text">Tapez le nom de la ville et appuyez sur Entrer</div>
           <div className="info">
             <div className="sub-heading">
-              Weather Forecast <div>on</div>
+              Prévisions météorologiques  <div>sur</div>
             </div>
             <small className="date">
               {success ? moment().format("MMM DD YYYY") : null}
@@ -76,27 +76,27 @@ class Weather extends React.Component {
                   </span>
                   C
                 </div>
-                <span className="weather-condition">
+                {/* <span className="weather-condition">
                   {success ? weather[0].main : null}
-                </span>
+                </span> */}
               </div>
             </div>
             <div className="additional-info">
               <ul className="list">
                 <li>
-                  <b>Feels Like</b> {success ? main.feels_like : null}
+                  <b>Se sentir comme</b> {success ? main.feels_like : null}
                 </li>
                 <li>
-                  <b>Min Temp</b> {success ? main.temp_min : null}
+                  <b>Température minimale</b> {success ? main.temp_min : null}
                 </li>
                 <li>
-                  <b>Max Temp</b> {success ? main.temp_max : null}
+                  <b>Température maximale</b> {success ? main.temp_max : null}
                 </li>
                 <li>
-                  <b>Pressure</b> {success ? main.pressure : null}
+                  <b>Pression</b> {success ? main.pressure : null}
                 </li>
                 <li>
-                  <b>Humidity</b> {success ? main.humidity : null}
+                  <b>Humidité</b> {success ? main.humidity : null}
                 </li>
               </ul>
             </div>
